@@ -38,7 +38,7 @@ import requests
 # link do open_weather: https://openweathermap.org/
 
 
-API_KEY = "eba259807620bad25fb87158e5f2fbfc" # chave confidencial sua do site;
+API_KEY = "*******************" # chave confidencial sua do site;
 cidade = "florianopolis"
 link = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={API_KEY}&lang=pt_br"
 
