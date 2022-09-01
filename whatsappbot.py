@@ -4,12 +4,9 @@ import time
 
 class WhatsappBot:
     def __init__(self):
-        self.mensagem = " Bom dia pessoal, veja o video que acabou de sair https://www.youtube.com"
-        # Altere o nome dos grupos aqui
+        self.mensagem = " Bom dia pessoa"
         self.grupos = ["nome_do_grupo"]
-        # Parte 1 - A mensagem que você quer enviar
         self.mensagem = "this is a test"
-        # Parte 2 - Nome dos grupos ou pessoas a quem você deseja enviar a mensagem
         self.grupos_ou_pessoas = ["nome_do_grupo"]
         options = webdriver.ChromeOptions()
         options.add_argument('lang=pt-br')
@@ -22,7 +19,7 @@ class WhatsappBot:
         #<div tabindex="-1" class="p3_M1">
         #<span data-testid="send" data-icon="send" class="">
         self.driver.get('https://web.whatsapp.com/')
-        time.sleep(30)
+        time.sleep(45)
         for grupo in self.grupos:
             grupo = self.driver.find_element_by_xpath(f"//span[@title='{grupo}']")
             time.sleep(5)
@@ -34,9 +31,9 @@ class WhatsappBot:
             chat_box.send_keys(self.mensagem)
             botao_enviar = self.driver.find_element_by_xpath(
                 "//span[@data-icon='send']")
-            time.sleep(5)
+            time.sleep(8)
             botao_enviar.click()
-            time.sleep(5)
+            time.sleep(8)
 
 bot = WhatsappBot()
 bot.EnviarMensagens()
